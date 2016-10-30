@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
 import MovieItem from '../../components/MovieItem';
 import './index.css';
+import Loader from '../../components/Loader';
 
 class MovieList extends Component {
   componentWillMount() {
@@ -11,7 +12,7 @@ class MovieList extends Component {
   }
   render() {
     const { movies } = this.props;
-    if (!movies.length) return <div>Loading</div>;
+    if (!movies.length) return <Loader/>;
 
     return (
       <div className="movie-list">

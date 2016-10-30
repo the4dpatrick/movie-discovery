@@ -4,3 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.loading {
+  text-align: center;
+}
