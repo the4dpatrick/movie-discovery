@@ -7,6 +7,10 @@ export function requestPopularMovies() {
   return axios.get(formatAPIUrl('/movie/popular'));
 }
 
+export function requestMovieDetails(id) {
+  return axios.get(formatAPIUrl(`/movie/${id}`));
+}
+
 function formatAPIUrl(endpoint) {
   return `${TMDB_API_URL}${endpoint}?api_key=${config.TMDB_API_KEY}`
 }

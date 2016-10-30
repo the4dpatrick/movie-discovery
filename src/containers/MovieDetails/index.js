@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
+import MovieHero from '../../components/MovieHero';
 
-const MovieDetails = (props) => {
-  return (
-    <div>
-      MovieDetails
-    </div>
-  )
+class MovieDetails extends Component {
+  componentWillMount() {
+    this.props.loadMovieDetails(this.props.params.movieId);
+  }
+  render() {
+    const { movie } = this.props;
+    if (!Object.keys(movie).length) return null;
+
+    return (
+      <div>
+        <MovieHero movie={movie} />
+        <div>
+          {JSON.stringify(movie, null, 2)}
+        </div>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = (state) => {
-  return {}
+  return { movie: state.movieDetails }
 }
 
 const mapDispatchToProps = (dispatch) => {
