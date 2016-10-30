@@ -1,0 +1,8 @@
+.Select .Select-control  {
+  width: 25vw;
+  transition: all 0.75s cubic-bezier(.25,.8,.25,1);
+}
+
+.Select.is-focused .Select-control {
+  width: 45vw;
+}

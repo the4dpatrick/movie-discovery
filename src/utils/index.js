@@ -11,6 +11,14 @@ export function requestMovieDetails(id) {
   return axios.get(formatAPIUrl(`/movie/${id}`));
 }
 
+export function requestMovies(query) {
+  return axios.get(formatAPIUrl(`/search/movie`), {
+    params: {
+      query: encodeURI(query)
+    }
+  });
+}
+
 function formatAPIUrl(endpoint) {
   return `${TMDB_API_URL}${endpoint}?api_key=${config.TMDB_API_KEY}`
 }
