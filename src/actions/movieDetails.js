@@ -11,7 +11,7 @@ export function loadMovieDetails(id) {
 
     requestMovieDetails(id)
       .then(res => dispatch(loadMovieDetailsSuccess(res.data)))
-      .catch(err => dispatch(loadMovieDetailsError(err.response.status_message)))
+      .catch(err => dispatch(loadMovieDetailsError(err)))
   }
 }
 

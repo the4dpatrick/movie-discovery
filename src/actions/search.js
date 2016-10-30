@@ -22,9 +22,10 @@ export function searchMovieSuccess(results) {
   }
 }
 
-export function searchMovieError() {
+export function searchMovieError(err) {
   return {
-    type: SEARCH_MOVIE_ERROR
+    type: SEARCH_MOVIE_ERROR,
+    payload: err
   }
 }
 

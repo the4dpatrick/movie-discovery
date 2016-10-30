@@ -13,7 +13,7 @@ export function loadPopularMovies() {
 
     requestPopularMovies()
       .then(res => dispatch(loadPopularMoviesSuccess(res.data.results)))
-      .catch(err => dispatch(loadPopularMoviesError(err.response.status_message)));
+      .catch(err => dispatch(loadPopularMoviesError(err)));
   }
 }
 
