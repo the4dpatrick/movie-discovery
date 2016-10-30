@@ -1,6 +1,5 @@
 import React, { Component, PropTypes as P } from 'react';
 import Select from 'react-select';
-import { push } from 'react-router-redux';
 import './index.css';
 import '../../../node_modules/react-select/dist/react-select.css';
 
