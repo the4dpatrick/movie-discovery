@@ -1,12 +1,35 @@
 .movie-hero {
-  padding: 2em;
+  overflow: hidden;
+  position: relative;
 }
+
+.movie-hero-title {
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  z-index: 1;
+}
+
 .movie-hero-image {
   display: block;
+  position: relative;
   width: 100%;
-  min-height: 500px;
+  height: 75vh;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+
+.movie-hero-image:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to right,black, rgba(0,0,0,0));
+  opacity: .6;
 }

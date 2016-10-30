@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
 import MovieItem from '../../components/MovieItem';
+import './index.css';
 
 class MovieList extends Component {
   componentWillMount() {
@@ -13,7 +14,7 @@ class MovieList extends Component {
     if (!movies.length) return <div>Loading</div>;
 
     return (
-      <div>
+      <div className="movie-list">
         {movies.map(m => <MovieItem movie={m} key={m.id}/>)}
       </div>
     )

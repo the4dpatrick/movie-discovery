@@ -1,13 +1,12 @@
 import React from 'react';
 import SearchBarContainer from '../../containers/SearchBarContainer';
 import { Link } from 'react-router';
+import './index.css';
 
 const Nav = (props) => {
   return (
     <div className="nav">
-      <div className="App-header">
-        <Link to="/">Movie Discovery</Link>
-      </div>
+      <Link to="/">The Movies</Link>
       <SearchBarContainer />
     </div>
   )
