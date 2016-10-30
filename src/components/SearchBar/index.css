@@ -6,3 +6,7 @@
 .Select.is-focused .Select-control {
   width: 45vw;
 }
+
+.Select .Select-arrow-zone {
+  display: none;
+}
