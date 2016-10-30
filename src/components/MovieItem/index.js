@@ -10,8 +10,9 @@ const MovieItem = (props) => {
       <img src={formatImageUrl(movie.poster_path, 300)} alt={movie.overview} />
       <div className="movie-item-details">
         <div className="movie-item-details-title">
-          {movie.title} - {movie.vote_average}
+          {movie.title}
         </div>
+        <div className="vote">{movie.vote_average}</div>
       </div>
     </Link>
   )
