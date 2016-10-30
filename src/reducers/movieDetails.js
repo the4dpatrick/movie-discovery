@@ -12,6 +12,7 @@ export default function movieDetails(state = initialState, action) {
       return initialState;
     case LOAD_MOVIE_DETAILS_SUCCESS:
       return Object.assign({}, state, action.payload);
+    case LOAD_MOVIE_DETAILS_ERROR:
     default:
       return state;
   }

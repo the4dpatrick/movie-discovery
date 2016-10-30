@@ -10,6 +10,8 @@ export default function popularMovies(state = initialState, action) {
   switch (action.type) {
     case LOAD_POPULAR_MOVIES_SUCCESS:
       return action.payload;
+    case LOAD_POPULAR_MOVIES:
+    case LOAD_POPULAR_MOVIES_ERROR:
     default:
       return state;
   }

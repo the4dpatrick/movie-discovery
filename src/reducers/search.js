@@ -12,6 +12,7 @@ export default function search(state = initialState, action) {
       return [];
     case SEARCH_MOVIE_SUCCESS:
       return action.payload;
+    case SEARCH_MOVIE_ERROR:
     default:
       return state;
   }
