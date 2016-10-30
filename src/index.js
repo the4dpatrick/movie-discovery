@@ -24,7 +24,7 @@ ReactDOM.render(
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={MovieList} />
-        <Route path="/:movieId" component={MovieDetails} />
+        <Route path="/movie/:movieId" component={MovieDetails} />
       </Route>
     </Router>
   </Provider>,
