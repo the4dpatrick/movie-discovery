@@ -17,14 +17,14 @@ const history = syncHistoryWithStore(hashHistory, store);
 // Containers
 import App from './containers/App';
 import MovieList from './containers/MovieList';
-import SelectedMovie from './containers/SelectedMovie';
+import MovieDetails from './containers/MovieDetails';
 
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={MovieList} />
-        <Route path="/:movieId" component={SelectedMovie} />
+        <Route path="/:movieId" component={MovieDetails} />
       </Route>
     </Router>
   </Provider>,

@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
 
-const SelectedMovie = (props) => {
+const MovieDetails = (props) => {
   return (
     <div>
-      SelectedMovie
+      MovieDetails
     </div>
   )
 }
@@ -19,4 +19,4 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(actions, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SelectedMovie);
+export default connect(mapStateToProps, mapDispatchToProps)(MovieDetails);
