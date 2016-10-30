@@ -8,6 +8,11 @@ class MovieDetails extends Component {
   componentWillMount() {
     this.props.loadMovieDetails(this.props.params.movieId);
   }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.params.movieId !== this.props.params.movieId) {
+      this.props.loadMovieDetails(nextProps.params.movieId);
+    }
+  }
   render() {
     const { movie } = this.props;
     if (!Object.keys(movie).length) return null;
