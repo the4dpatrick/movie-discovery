@@ -18,12 +18,7 @@ class MovieDetails extends Component {
     if (!Object.keys(movie).length) return null;
 
     return (
-      <div>
-        <MovieHero movie={movie} />
-        <div>
-          {JSON.stringify(movie, null, 2)}
-        </div>
-      </div>
+      <MovieHero movie={movie} />
     )
   }
 }
