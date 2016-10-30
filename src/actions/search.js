@@ -7,7 +7,7 @@ import { requestMovies } from '../utils';
 import { push } from 'react-router-redux';
 
 export function searchMovie(query) {
-  return dispatch =>
+  return dispatch => {
     dispatch({ type: SEARCH_MOVIE });
     requestMovies(query)
       .then(res => dispatch(searchMovieSuccess(res.data.results)))
